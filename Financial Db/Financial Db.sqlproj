@@ -72,5 +72,9 @@
     <Build Include="Stored Procedures\sp.RemoveAffiliatedBank.sql" />
     <Build Include="Stored Procedures\sp.AddTransactionError.sql" />
     <Build Include="Stored Procedures\sp.RemoveTransactionError.sql" />
+    <Build Include="Stored Procedures\sp.AddTransactionState.sql" />
+    <Build Include="Stored Procedures\sp.RemoveTransactionState.sql" />
+    <Build Include="Stored Procedures\sp.AddTransactionType.sql" />
+    <Build Include="Stored Procedures\sp.RemoveTransactionType.sql" />
   </ItemGroup>
 </Project>

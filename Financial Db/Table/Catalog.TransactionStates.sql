@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Catalog.TransactionStates]
 (
 	[Id] INT IDENTITY(1,1) PRIMARY KEY,
-	[State] VARCHAR(20) NOT NULL,
-	[Description] VARCHAR(50)
+	[State] VARCHAR(30) NOT NULL,
+	[Description] VARCHAR(250)
 )

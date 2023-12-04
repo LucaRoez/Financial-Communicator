@@ -3,7 +3,7 @@
 	@ID int
 AS
 BEGIN
-	-- Check if there're actually affiliated banks already loaded
+	-- Check if there're actually transaction errors already loaded
 	IF (SELECT COUNT(Id) FROM [Catalog.TransactionErrors]) > 0
 	BEGIN
 		-- Check if the ID parameter exists
