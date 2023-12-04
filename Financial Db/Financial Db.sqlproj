@@ -57,15 +57,20 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Table" />
+    <Folder Include="Stored Procedures" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Table\D.Transactions.sql" />
-    <Build Include="Table\D.Clients.sql" />
-    <Build Include="Table\C.AffiliatedBanks.sql" />
-    <Build Include="Table\C.TransactionErrors.sql" />
-    <Build Include="Table\C.TransactionStates.sql" />
-    <Build Include="Table\C.TransactionTypes.sql" />
-    <Build Include="Table\D.InterbankTransactionCodes.sql" />
-    <Build Include="Table\L.TransactionHistory.sql" />
+    <Build Include="Table\Data.Transactions.sql" />
+    <Build Include="Table\Data.Clients.sql" />
+    <Build Include="Table\Catalog.AffiliatedBanks.sql" />
+    <Build Include="Table\Catalog.TransactionErrors.sql" />
+    <Build Include="Table\Catalog.TransactionStates.sql" />
+    <Build Include="Table\Catalog.TransactionTypes.sql" />
+    <Build Include="Table\Data.InterbankTransactionCodes.sql" />
+    <Build Include="Table\Linking.TransactionHistory.sql" />
+    <Build Include="Stored Procedures\sp.AddAffiliatedBank.sql" />
+    <Build Include="Stored Procedures\sp.RemoveAffiliatedBank.sql" />
+    <Build Include="Stored Procedures\sp.AddTransactionError.sql" />
+    <Build Include="Stored Procedures\sp.RemoveTransactionError.sql" />
   </ItemGroup>
 </Project>
