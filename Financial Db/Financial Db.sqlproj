@@ -58,6 +58,8 @@
     <Folder Include="Properties" />
     <Folder Include="Table" />
     <Folder Include="Stored Procedures" />
+    <Folder Include="Stored Procedures\catalogsDMLs" />
+    <Folder Include="Stored Procedures\datasDMLs" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Table\Data.Transactions.sql" />
@@ -68,13 +70,15 @@
     <Build Include="Table\Catalog.TransactionTypes.sql" />
     <Build Include="Table\Data.InterbankTransactionCodes.sql" />
     <Build Include="Table\Linking.TransactionHistory.sql" />
-    <Build Include="Stored Procedures\sp.AddAffiliatedBank.sql" />
-    <Build Include="Stored Procedures\sp.RemoveAffiliatedBank.sql" />
-    <Build Include="Stored Procedures\sp.AddTransactionError.sql" />
-    <Build Include="Stored Procedures\sp.RemoveTransactionError.sql" />
-    <Build Include="Stored Procedures\sp.AddTransactionState.sql" />
-    <Build Include="Stored Procedures\sp.RemoveTransactionState.sql" />
-    <Build Include="Stored Procedures\sp.AddTransactionType.sql" />
-    <Build Include="Stored Procedures\sp.RemoveTransactionType.sql" />
+    <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveTransactionType.sql" />
+    <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveTransactionState.sql" />
+    <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveTransactionError.sql" />
+    <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveAffiliatedBank.sql" />
+    <Build Include="Stored Procedures\catalogsDMLs\sp.AddTransactionType.sql" />
+    <Build Include="Stored Procedures\catalogsDMLs\sp.AddTransactionState.sql" />
+    <Build Include="Stored Procedures\catalogsDMLs\sp.AddTransactionError.sql" />
+    <Build Include="Stored Procedures\catalogsDMLs\sp.AddAffiliatedBank.sql" />
+    <Build Include="Stored Procedures\datasDMLs\sp.AddClient.sql" />
+    <Build Include="Stored Procedures\datasDMLs\sp.RemoveClient.sql" />
   </ItemGroup>
 </Project>
