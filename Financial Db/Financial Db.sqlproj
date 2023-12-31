@@ -60,16 +60,13 @@
     <Folder Include="Stored Procedures" />
     <Folder Include="Stored Procedures\catalogsDMLs" />
     <Folder Include="Stored Procedures\datasDMLs" />
+    <Folder Include="Database" />
+    <Folder Include="Stored Procedures\linkingDMLs" />
+    <Folder Include="Table\catalogsDDLs" />
+    <Folder Include="Table\datasDDLs" />
+    <Folder Include="Table\linkingDDLs" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Table\Data.Transactions.sql" />
-    <Build Include="Table\Data.Clients.sql" />
-    <Build Include="Table\Catalog.AffiliatedBanks.sql" />
-    <Build Include="Table\Catalog.TransactionErrors.sql" />
-    <Build Include="Table\Catalog.TransactionStates.sql" />
-    <Build Include="Table\Catalog.TransactionTypes.sql" />
-    <Build Include="Table\Data.InterbankTransactionCodes.sql" />
-    <Build Include="Table\Linking.TransactionHistory.sql" />
     <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveTransactionType.sql" />
     <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveTransactionState.sql" />
     <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveTransactionError.sql" />
@@ -80,5 +77,20 @@
     <Build Include="Stored Procedures\catalogsDMLs\sp.AddAffiliatedBank.sql" />
     <Build Include="Stored Procedures\datasDMLs\sp.AddClient.sql" />
     <Build Include="Stored Procedures\datasDMLs\sp.RemoveClient.sql" />
+    <None Include="Database\DropBankingTrasactionsSqlAppDB.sql" />
+    <Build Include="Table\catalogsDDLs\Catalog.AffiliatedBanks.sql" />
+    <Build Include="Table\catalogsDDLs\Catalog.TransactionErrors.sql" />
+    <Build Include="Table\catalogsDDLs\Catalog.TransactionStates.sql" />
+    <Build Include="Table\catalogsDDLs\Catalog.TransactionTypes.sql" />
+    <Build Include="Table\datasDDLs\Data.Clients.sql" />
+    <Build Include="Table\datasDDLs\Data.InterbankTransactionCodes.sql" />
+    <Build Include="Table\datasDDLs\Data.Transactions.sql" />
+    <Build Include="Table\linkingDDLs\Linking.TransactionHistory.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database\CreateBankingTrasactionsSqlAppDB.sql" />
+    <None Include="Financial Db.dbmdl" />
+    <None Include="Financial Db.jfm" />
+    <None Include="Financial Db.sqlproj.user" />
   </ItemGroup>
 </Project>
