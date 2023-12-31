@@ -2,7 +2,7 @@
 
 GO
 
-CREATE TABLE [dbo].[Linking.TransactionHistory]
+CREATE TABLE [Linking.TransactionHistory]
 (
 	[Id] INT IDENTITY(1,1) PRIMARY KEY,
 	[Transaction_Id] BIGINT NOT NULL,

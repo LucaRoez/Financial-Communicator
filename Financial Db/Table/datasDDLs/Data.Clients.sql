@@ -2,7 +2,7 @@
 
 GO
 
-CREATE TABLE [dbo].[Data.Clients]
+CREATE TABLE [Data.Clients]
 (
 	[Id] INT IDENTITY(1,1) PRIMARY KEY,
 	[First Name] VARCHAR(50) NOT NULL,

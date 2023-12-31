@@ -2,7 +2,7 @@
 
 GO
 
-CREATE TABLE [dbo].[Catalog.TransactionErrors]
+CREATE TABLE [Catalog.TransactionErrors]
 (
 	[Id] INT IDENTITY(1,1) PRIMARY KEY,
 	[Type] VARCHAR(30) NOT NULL,

@@ -2,7 +2,7 @@
 
 GO
 
-CREATE TABLE [dbo].[Data.Transactions]
+CREATE TABLE [Data.Transactions]
 (
 	[Id] BIGINT IDENTITY(1,1) PRIMARY KEY,
 	[Date] DATETIME NOT NULL,

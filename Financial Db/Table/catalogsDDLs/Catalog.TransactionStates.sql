@@ -2,7 +2,7 @@
 
 GO
 
-CREATE TABLE [dbo].[Catalog.TransactionStates]
+CREATE TABLE [Catalog.TransactionStates]
 (
 	[Id] INT IDENTITY(1,1) PRIMARY KEY,
 	[State] VARCHAR(30) NOT NULL,

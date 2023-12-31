@@ -86,6 +86,9 @@
     <Build Include="Table\datasDDLs\Data.InterbankTransactionCodes.sql" />
     <Build Include="Table\datasDDLs\Data.Transactions.sql" />
     <Build Include="Table\linkingDDLs\Linking.TransactionHistory.sql" />
+    <Build Include="Table\datasDDLs\Data.TransactionsAddForeignKeys.sql" />
+    <Build Include="Table\datasDDLs\Data.InterbankTransactionCodesAddForeignKeys.sql" />
+    <Build Include="Table\linkingDDLs\Linking.TransactionHistoryAddForeignKeys.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Database\CreateBankingTrasactionsSqlAppDB.sql" />
