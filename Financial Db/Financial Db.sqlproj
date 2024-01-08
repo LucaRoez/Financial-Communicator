@@ -56,15 +56,16 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="Table" />
+    <Folder Include="Tables" />
     <Folder Include="Stored Procedures" />
     <Folder Include="Stored Procedures\catalogsDMLs" />
     <Folder Include="Stored Procedures\datasDMLs" />
     <Folder Include="Database" />
-    <Folder Include="Stored Procedures\linkingDMLs" />
-    <Folder Include="Table\catalogsDDLs" />
-    <Folder Include="Table\datasDDLs" />
-    <Folder Include="Table\linkingDDLs" />
+    <Folder Include="Tables\catalogsDDLs" />
+    <Folder Include="Tables\datasDDLs" />
+    <Folder Include="Tables\linkingDDLs" />
+    <Folder Include="Triggers" />
+    <Folder Include="Stored Procedures\LinkingDMLs" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveTransactionType.sql" />
@@ -78,22 +79,26 @@
     <Build Include="Stored Procedures\datasDMLs\sp.AddClient.sql" />
     <Build Include="Stored Procedures\datasDMLs\sp.RemoveClient.sql" />
     <None Include="Database\DropBankingTrasactionsSqlAppDB.sql" />
-    <Build Include="Table\catalogsDDLs\Catalog.AffiliatedBanks.sql" />
-    <Build Include="Table\catalogsDDLs\Catalog.TransactionErrors.sql" />
-    <Build Include="Table\catalogsDDLs\Catalog.TransactionStates.sql" />
-    <Build Include="Table\catalogsDDLs\Catalog.TransactionTypes.sql" />
-    <Build Include="Table\datasDDLs\Data.Clients.sql" />
-    <Build Include="Table\datasDDLs\Data.InterbankTransactionCodes.sql" />
-    <Build Include="Table\datasDDLs\Data.Transactions.sql" />
-    <Build Include="Table\linkingDDLs\Linking.TransactionHistory.sql" />
-    <Build Include="Table\datasDDLs\Data.TransactionsAddForeignKeys.sql" />
-    <Build Include="Table\datasDDLs\Data.InterbankTransactionCodesAddForeignKeys.sql" />
-    <Build Include="Table\linkingDDLs\Linking.TransactionHistoryAddForeignKeys.sql" />
+    <Build Include="Tables\catalogsDDLs\Catalog.AffiliatedBanks.sql" />
+    <Build Include="Tables\catalogsDDLs\Catalog.TransactionErrors.sql" />
+    <Build Include="Tables\catalogsDDLs\Catalog.TransactionStates.sql" />
+    <Build Include="Tables\catalogsDDLs\Catalog.TransactionTypes.sql" />
+    <Build Include="Tables\datasDDLs\Data.Clients.sql" />
+    <Build Include="Tables\datasDDLs\Data.InterbankTransactionCodes.sql" />
+    <Build Include="Tables\datasDDLs\Data.Transactions.sql" />
+    <Build Include="Tables\linkingDDLs\Linking.TransactionHistory.sql" />
+    <Build Include="Tables\datasDDLs\Data.TransactionsAddForeignKeys.sql" />
+    <Build Include="Tables\datasDDLs\Data.InterbankTransactionCodesAddForeignKeys.sql" />
+    <Build Include="Tables\linkingDDLs\Linking.TransactionHistoryAddForeignKeys.sql" />
+    <Build Include="Stored Procedures\LinkingDMLs\sp.AddMessageInTransactionHistory.sql" />
+    <Build Include="Stored Procedures\datasDMLs\sp.AddTransaction.sql" />
+    <Build Include="Stored Procedures\datasDMLs\sp.AddInterbankTransactionCode.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Database\CreateBankingTrasactionsSqlAppDB.sql" />
     <None Include="Financial Db.dbmdl" />
     <None Include="Financial Db.jfm" />
     <None Include="Financial Db.sqlproj.user" />
+    <None Include="Triggers\tg.AddTransactionHistory.sql" />
   </ItemGroup>
 </Project>

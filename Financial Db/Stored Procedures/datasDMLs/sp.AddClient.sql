@@ -9,27 +9,26 @@
 	@cardNumber INT NOT NULL,
 	@signUpDate DATETIME NOT NULL
 AS
-	IF @firstName IS NULL OR @fatherName IS NULL OR @motherName IS NULL
-	OR @birthDate IS NULL OR @phoneNumber IS NULL OR @account IS NULL
-	OR @bankKey IS NULL OR @cardNumber IS NULL OR @signUpDate IS NULL
-	BEGIN
-		INSERT INTO [Data.Clients](
-		[First Name], [Father Name],
-		[Mother Name], [Birth Date],
-		[Phone Number], [Account],
-		[Bank Key], [Card Number],
-		[Sign Up Date])
-		VALUES (
-		@firstName, @fatherName,
-		@motherName, @birthDate,
-		@phoneNumber, @account,
-		@bankKey, @cardNumber,
-		@signUpDate)
-	END
-	ELSE
-	BEGIN
-		RETURN 'Remember introduce mandatorily the first name first, then father name,
-		mother name, birth date, phone number, account name, banking key, card number and
-		the sign up date in this order.'
-	END
-RETURN 0
+IF @firstName IS NOT NULL OR @fatherName IS NOT NULL OR @motherName IS NOT NULL
+OR @birthDate IS NOT NULL OR @phoneNumber IS NOT NULL OR @account IS NOT NULL
+OR @bankKey IS NOT NULL OR @cardNumber IS NOT NULL OR @signUpDate IS NOT NULL
+BEGIN
+	INSERT INTO [Data.Clients](
+	[First Name], [Father Name],
+	[Mother Name], [Birth Date],
+	[Phone Number], [Account],
+	[Bank Key], [Card Number],
+	[Sign Up Date])
+	VALUES (
+	@firstName, @fatherName,
+	@motherName, @birthDate,
+	@phoneNumber, @account,
+	@bankKey, @cardNumber,
+	@signUpDate)
+END
+ELSE
+BEGIN
+	RETURN 'Remember introduce mandatorily the first name first, then father name,
+	mother name, birth date, phone number, account name, banking key, card number and
+	the sign up date in this order.'
+END
