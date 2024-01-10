@@ -10,5 +10,5 @@ BEGIN
 		GETDATE() as Date
 	FROM inserted T
 	RIGHT JOIN
-		[Catalog.TransactionStates] S ON S.State = 'Started'	-- verbose way to put this value
+		[Catalog.TransactionStates] S ON S.State = 'Requested'	-- verbose way to put this value
 END;

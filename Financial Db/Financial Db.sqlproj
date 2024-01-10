@@ -58,26 +58,26 @@
     <Folder Include="Properties" />
     <Folder Include="Tables" />
     <Folder Include="Stored Procedures" />
-    <Folder Include="Stored Procedures\catalogsDMLs" />
-    <Folder Include="Stored Procedures\datasDMLs" />
+    <Folder Include="Stored Procedures\catalogsDDLs" />
+    <Folder Include="Stored Procedures\datasDDLs" />
     <Folder Include="Database" />
     <Folder Include="Tables\catalogsDDLs" />
     <Folder Include="Tables\datasDDLs" />
     <Folder Include="Tables\linkingDDLs" />
     <Folder Include="Triggers" />
-    <Folder Include="Stored Procedures\LinkingDMLs" />
+    <Folder Include="Stored Procedures\LinkingDDLs" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveTransactionType.sql" />
-    <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveTransactionState.sql" />
-    <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveTransactionError.sql" />
-    <Build Include="Stored Procedures\catalogsDMLs\sp.RemoveAffiliatedBank.sql" />
-    <Build Include="Stored Procedures\catalogsDMLs\sp.AddTransactionType.sql" />
-    <Build Include="Stored Procedures\catalogsDMLs\sp.AddTransactionState.sql" />
-    <Build Include="Stored Procedures\catalogsDMLs\sp.AddTransactionError.sql" />
-    <Build Include="Stored Procedures\catalogsDMLs\sp.AddAffiliatedBank.sql" />
-    <Build Include="Stored Procedures\datasDMLs\sp.AddClient.sql" />
-    <Build Include="Stored Procedures\datasDMLs\sp.RemoveClient.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.RemoveTransactionType.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.RemoveTransactionState.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.RemoveTransactionError.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.RemoveAffiliatedBank.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.AddTransactionType.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.AddTransactionState.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.AddTransactionError.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.AddAffiliatedBank.sql" />
+    <Build Include="Stored Procedures\datasDDLs\sp.AddClient.sql" />
+    <Build Include="Stored Procedures\datasDDLs\sp.RemoveClient.sql" />
     <None Include="Database\DropBankingTrasactionsSqlAppDB.sql" />
     <Build Include="Tables\catalogsDDLs\Catalog.AffiliatedBanks.sql" />
     <Build Include="Tables\catalogsDDLs\Catalog.TransactionErrors.sql" />
@@ -90,9 +90,15 @@
     <Build Include="Tables\datasDDLs\Data.TransactionsAddForeignKeys.sql" />
     <Build Include="Tables\datasDDLs\Data.InterbankTransactionCodesAddForeignKeys.sql" />
     <Build Include="Tables\linkingDDLs\Linking.TransactionHistoryAddForeignKeys.sql" />
-    <Build Include="Stored Procedures\LinkingDMLs\sp.AddMessageInTransactionHistory.sql" />
-    <Build Include="Stored Procedures\datasDMLs\sp.AddTransaction.sql" />
-    <Build Include="Stored Procedures\datasDMLs\sp.AddInterbankTransactionCode.sql" />
+    <Build Include="Stored Procedures\LinkingDDLs\sp.AddMessageInTransactionHistory.sql" />
+    <Build Include="Stored Procedures\datasDDLs\sp.AddTransaction.sql" />
+    <Build Include="Stored Procedures\datasDDLs\sp.AddInterbankTransactionCode.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.UpdateAffiliatedBank.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.UpdateTransactionError.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.UpdateTransactionState.sql" />
+    <Build Include="Stored Procedures\catalogsDDLs\sp.UpdateTransactionType.sql" />
+    <Build Include="Stored Procedures\datasDDLs\sp.RemoveInterbankTransactionCode.sql" />
+    <Build Include="Stored Procedures\datasDDLs\sp.RemoveTransaction.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Database\CreateBankingTrasactionsSqlAppDB.sql" />
