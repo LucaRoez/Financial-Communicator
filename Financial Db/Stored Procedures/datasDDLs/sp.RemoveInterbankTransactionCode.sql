@@ -1,6 +1,27 @@
 ﻿CREATE PROCEDURE [sp.RemoveInterbankTransactionCode]
-	@param1 int = 0,
-	@param2 int
+	@transactionID BIGINT,
+	@code VARCHAR(50)
 AS
-	SELECT @param1, @param2
-RETURN 0
+	IF (SELECT COUNT(Id) FROM [Data.InterbankTransactionCodes]) > 0
+	BEGIN
+		IF COALESCE(@transactionID, 0) = 0 AND EXISTS (SELECT 1 FROM [Data.InterbankTransactionCodes] WHERE Transaction_Id = @transactionID)
+		BEGIN
+			DELETE FROM [Data.InterbankTransactionCodes] WHERE Transaction_Id = @transactionID;
+		END
+
+		ELSE IF @code IS NOT NULL AND EXISTS (SELECT 1 FROM [Data.InterbankTransactionCodes] WHERE Code = @code)
+		BEGIN
+			DELETE FROM [Data.InterbankTransactionCodes] WHERE Code = @code
+		END
+		
+		ELSE
+		BEGIN
+			RETURN "You must enter some value, the associated transaction ID first or
+			second the issued date, in that order."
+		END
+	END
+
+	ELSE
+	BEGIN
+		RETURN "Our data base doesn't have any registered transaction to delete yet."
+	END

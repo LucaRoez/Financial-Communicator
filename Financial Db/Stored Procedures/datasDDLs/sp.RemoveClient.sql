@@ -5,17 +5,17 @@
 AS
 	IF (SELECT COUNT(Id) FROM [Data.Clients]) > 0
 	BEGIN
-		IF COALESCE(@ID, 0) = 0 AND (SELECT Id FROM [Data.Clients]) = @ID
+		IF COALESCE(@ID, 0) = 0 AND EXISTS (SELECT 1 FROM [Data.Clients] WHERE Id = @ID)
 		BEGIN
 			DELETE FROM [Data.Clients] WHERE Id = @ID
 		END
 
-		ELSE IF COALESCE(@account, '') = '' AND (SELECT Account FROM [Data.Clients]) = @account
+		ELSE IF COALESCE(@account, '') = '' AND EXISTS (SELECT 1 FROM [Data.Clients] WHERE Account = @account)
 		BEGIN
 			DELETE FROM [Data.Clients] WHERE Account = @account
 		END
 
-		ELSE IF COALESCE(@firstName, '') = '' AND (SELECT [First Name] FROM [Data.Clients]) = @firstName
+		ELSE IF COALESCE(@firstName, '') = '' AND EXISTS (SELECT 1 FROM [Data.Clients] WHERE [First Name] = @firstName)
 		BEGIN
 			DELETE FROM [Data.Clients] WHERE [First Name] = @firstName
 		END
@@ -23,7 +23,7 @@ AS
 		ELSE
 		BEGIN
 			RETURN "You must enter some value, the ID first, or
-			second the account name or third your first name, in that order."
+			second the account name, or third your first name, in that order."
 		END
 	END
 	ELSE
